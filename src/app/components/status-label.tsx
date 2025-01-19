@@ -14,7 +14,7 @@ disabled?:boolean;
 };
 
 
-
+console.log(process.env.CRM_SECRET_KEY);
 export default function StatusLabel({ children, status, disabled}: StatusLabelProps) {
   return (
     <span
