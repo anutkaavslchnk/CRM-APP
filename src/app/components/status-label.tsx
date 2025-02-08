@@ -1,7 +1,8 @@
 import React from 'react';
 import clsx from 'clsx';
-
 import { CompanyStatus } from '@/lib/api';
+
+
 export interface StatusLabelProps{
 
 status: CompanyStatus;
