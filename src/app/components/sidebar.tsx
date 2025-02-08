@@ -7,8 +7,8 @@ import squares from '/public/squares.svg';
 import briefcase from '/public/briefcase.svg';
 import arrow_rec from '/public/wow-left-rec.svg'
 import { usePathname, useRouter } from 'next/navigation';
-export interface SidebarProps {}
-export default function Sidebar({}: SidebarProps) {
+
+export default function Sidebar() {
   const router=useRouter();
 const pathname=usePathname();
   const handleExitClick=()=>{

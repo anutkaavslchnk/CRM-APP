@@ -7,10 +7,8 @@ import getQueryClient from '@/lib/getQueryClient';
 import { getCompanies } from '@/lib/api';
 import { dehydrate, HydrationBoundary } from '@tanstack/react-query';
 
-export interface PageProps{
 
-}
-export default async function Page({}: PageProps) {
+export default async function Page() {
   const queryClient = getQueryClient();
   await queryClient.prefetchQuery({
     queryKey: ['companies'],

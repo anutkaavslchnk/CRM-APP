@@ -1,9 +1,9 @@
 import Link from "next/link";
 import React from "react";
 
-export interface Props {};
 
-export default function NotFound({}: Props) {
+
+export default function NotFound() {
   return (
   <div>
     <p>Could not found</p>
