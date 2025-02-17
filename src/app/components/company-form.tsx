@@ -57,17 +57,20 @@ export default function CompanyForm({ onSubmit }: CompanyFormProps) {
     },
   });
   const handleSubmit = async (values: CompanyFieldValues) => {
+    const category = categories?.find(({ id }) => id === values.categoryId);
+    const country = countries?.find(({ id }) => id === values.countryId);
+  
     await mutateAsync({
       ...values,
-      categoryTitle:
-        categories.find(({ id }) => id === values.categoryId)?.title ?? '',
-      countryTitle:
-        countries.find(({ id }) => id === values.countryId)?.title ?? '',
+      categoryTitle: category ? category.title : '',
+      countryTitle: country ? country.title : '',
     });
+  
     if (onSubmit) {
       onSubmit(values);
     }
   };
+  
 
   return (
     <Formik initialValues={initialValues} onSubmit={handleSubmit}>
@@ -77,6 +80,7 @@ export default function CompanyForm({ onSubmit }: CompanyFormProps) {
           <div className="flex flex-col flex-1 gap-5">
             <LogoUploader label="Logo" placeholder="Upload photo" />
             <InputField
+            id="status"
               required
               label="Status"
               placeholder="Status"
@@ -92,6 +96,7 @@ export default function CompanyForm({ onSubmit }: CompanyFormProps) {
               )}
             </InputField>
             <InputField
+            id="status"
               required
               label="Country"
               placeholder="Country"
@@ -106,8 +111,9 @@ export default function CompanyForm({ onSubmit }: CompanyFormProps) {
             </InputField>
           </div>
           <div className="flex flex-col flex-1 gap-5">
-            <InputField required label="Name" placeholder="Name" name="title" />
+            <InputField  id="status"required label="Name" placeholder="Name" name="title" />
             <InputField
+            id="status"
               required
               label="Category"
               placeholder="Category"
@@ -121,12 +127,14 @@ export default function CompanyForm({ onSubmit }: CompanyFormProps) {
               ))}
             </InputField>
             <InputField
+            id="status"
               required
               label="Joined date"
-              type="date"
+          
               name="joinedDate"
             />
             <InputField
+            id="status"
               required
               label="Description"
               placeholder="Description"
