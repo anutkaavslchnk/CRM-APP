@@ -1,6 +1,6 @@
 # CRM App
 
-Technologies:
+## Technologies:
 
 * Next.js
 * React.js
