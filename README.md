@@ -1,8 +1,8 @@
-# CRM APP
+# CRM App
 
 Technologies:
 
--Next.js
--React.js
--Tailwind CSS
+* Next.js
+* React.js
+* Tailwind CSS
 
